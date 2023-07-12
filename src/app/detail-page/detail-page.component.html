@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ listing.title }}</mat-card-title>
+    <mat-card-subtitle>{{ listing.address }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="listing.imageUrl" alt="Listing Image" />
+  <mat-card-content>
+    <ul>
+      <li><strong>Beds:</strong> {{ listing.beds }}</li>
+      <li><strong>Baths:</strong> {{ listing.bath }}</li>
+      <li><strong>Covered Area:</strong> {{ listing.coveredAreaSQFT }} sqft</li>
+      <li><strong>Property Type:</strong> {{ listing.propertyType }}</li>
+      <li>
+        <strong>Commercial:</strong> {{ listing.isCommercial ? "Yes" : "No" }}
+      </li>
+      <li><strong>Price:</strong> {{ listing.price | currency }}</li>
+    </ul>
+  </mat-card-content>
+</mat-card>
